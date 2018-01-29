@@ -19,7 +19,7 @@ def alarm(time):
 
 if __name__ == '__main__':
     scheduler = BlockingScheduler()
-    url = sys.argv[1] if len(sys.argv) > 1 else 'sqlite:///example.sqlite'
+    url = sys.argv[1] if len(sys.argv) > 1 else 'sqlite:///jobs.sqlite'
     scheduler.add_jobstore('sqlalchemy', url=url)
     alarm_time = datetime.now() + timedelta(seconds=10)
     scheduler.add_job(alarm, 'date', run_date=alarm_time, args=[datetime.now()])
