@@ -8,7 +8,7 @@ This example shows a tooltip on
 a window and a button
 
 author: Jan Bodnar
-website: zetcode.com
+website: http://zetcode.com/gui/pysidetutorial/
 last edited: August 2011
 """
 
