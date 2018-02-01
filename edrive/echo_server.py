@@ -3,6 +3,7 @@ from twisted.internet import protocol, reactor, endpoints
 
 class Echo(protocol.Protocol):
     def dataReceived(self, data):
+        print(data)
         self.transport.write(data)
 
 
