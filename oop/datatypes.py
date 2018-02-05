@@ -47,6 +47,8 @@ for i in range(2):
         transposed_row.append(row[i])
         transposed.append(transposed_row)
 print(transposed)
+# prints: [[1, 3, 5, 7], [1, 3, 5, 7], [1, 3, 5, 7], [1, 3, 5, 7], [2, 4, 6, 8], [2, 4, 6, 8], [2, 4, 6, 8], [2, 4, 6, 8]]
 
 transpose = [[row[i] for row in matrix] for i in range(2)]
 print(transpose)
+# prints: [[1, 3, 5, 7], [2, 4, 6, 8]]
