@@ -6,10 +6,10 @@ class Counter(resource.Resource):
     isLeaf = True
     numberRequests = 0
 
-    def render_GET(self, request):
+    def render_all(self, request):
         self.numberRequests += 1
         request.setHeader(b"content-type", b"text/plain")
-        content = u"I am request #{}\n".format(self.numberRequests)
+        content = "I am request #{}\n".format(self.numberRequests)
         return content.encode("ascii")
 
 

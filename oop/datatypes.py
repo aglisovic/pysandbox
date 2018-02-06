@@ -40,15 +40,18 @@ print(obj)
 
 # loops in comprehension
 matrix = [[1, 2], [3, 4], [5, 6], [7, 8]]
+
+# loop:
 transposed = []
 for i in range(2):
     transposed_row = []
     for row in matrix:
         transposed_row.append(row[i])
-        transposed.append(transposed_row)
+    transposed.append(transposed_row)
 print(transposed)
-# prints: [[1, 3, 5, 7], [1, 3, 5, 7], [1, 3, 5, 7], [1, 3, 5, 7], [2, 4, 6, 8], [2, 4, 6, 8], [2, 4, 6, 8], [2, 4, 6, 8]]
+# prints: [[1, 3, 5, 7], [2, 4, 6, 8]]
 
-transpose = [[row[i] for row in matrix] for i in range(2)]
-print(transpose)
+# comprehension:
+transposed = [[row[i] for row in matrix] for i in range(2)]
+print(transposed)
 # prints: [[1, 3, 5, 7], [2, 4, 6, 8]]
